@@ -1,0 +1,9 @@
+product_id,product_name,product_category
+P01,Business Current Account,Account
+P02,Business Savings,Account
+P03,Business Credit,Financing
+P04,Payment Services,Payments
+P05,Business Card,Cards
+P06,Online Banking,Digital
+P07,Cash Management,Payments
+P08,Working Capital Loan,Financing

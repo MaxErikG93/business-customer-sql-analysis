@@ -1,0 +1,61 @@
+customer_id,company_name,industry,region,customer_segment,customer_since
+C1000,Demo GmbH 001,Hospitality,Munich,Micro,2023-03-10
+C1001,Demo GmbH 002,Retail,Dresden,Micro,2024-07-31
+C1002,Demo GmbH 003,Manufacturing,Frankfurt,Small,2023-02-05
+C1003,Demo GmbH 004,Hospitality,Berlin,Micro,2022-11-09
+C1004,Demo GmbH 005,IT Services,Dresden,Micro,2022-11-01
+C1005,Demo GmbH 006,Energy,Hamburg,Small,2022-07-30
+C1006,Demo GmbH 007,Manufacturing,Cologne,Micro,2021-08-30
+C1007,Demo GmbH 008,Manufacturing,Berlin,Small,2023-11-04
+C1008,Demo GmbH 009,Hospitality,Cologne,Micro,2022-07-06
+C1009,Demo GmbH 010,Healthcare,Leipzig,Medium,2020-12-10
+C1010,Demo GmbH 011,IT Services,Hamburg,Small,2023-01-19
+C1011,Demo GmbH 012,Hospitality,Hamburg,Micro,2022-12-05
+C1012,Demo GmbH 013,IT Services,Berlin,Micro,2020-10-10
+C1013,Demo GmbH 014,IT Services,Hamburg,Small,2019-11-14
+C1014,Demo GmbH 015,Energy,Frankfurt,Small,2022-06-11
+C1015,Demo GmbH 016,Manufacturing,Hamburg,Small,2020-11-14
+C1016,Demo GmbH 017,Retail,Cologne,Small,2020-10-25
+C1017,Demo GmbH 018,Energy,Cologne,Micro,2024-06-21
+C1018,Demo GmbH 019,Energy,Dresden,Micro,2023-06-20
+C1019,Demo GmbH 020,IT Services,Cologne,Micro,2023-02-04
+C1020,Demo GmbH 021,Professional Services,Dresden,Medium,2022-02-10
+C1021,Demo GmbH 022,Manufacturing,Cologne,Small,2024-01-28
+C1022,Demo GmbH 023,Healthcare,Frankfurt,Micro,2023-03-01
+C1023,Demo GmbH 024,Energy,Stuttgart,Micro,2020-07-17
+C1024,Demo GmbH 025,Retail,Dresden,Micro,2022-07-15
+C1025,Demo GmbH 026,Professional Services,Munich,Micro,2023-06-25
+C1026,Demo GmbH 027,Professional Services,Leipzig,Small,2020-11-29
+C1027,Demo GmbH 028,Healthcare,Berlin,Small,2024-11-30
+C1028,Demo GmbH 029,Energy,Cologne,Medium,2019-01-02
+C1029,Demo GmbH 030,Retail,Hamburg,Small,2020-10-03
+C1030,Demo GmbH 031,Manufacturing,Stuttgart,Micro,2023-05-09
+C1031,Demo GmbH 032,Construction,Cologne,Small,2021-05-04
+C1032,Demo GmbH 033,Retail,Hamburg,Small,2023-10-26
+C1033,Demo GmbH 034,Healthcare,Leipzig,Small,2023-07-20
+C1034,Demo GmbH 035,Professional Services,Leipzig,Small,2022-02-27
+C1035,Demo GmbH 036,Manufacturing,Leipzig,Small,2021-12-12
+C1036,Demo GmbH 037,Retail,Hamburg,Small,2023-09-04
+C1037,Demo GmbH 038,Construction,Cologne,Micro,2023-08-23
+C1038,Demo GmbH 039,Construction,Leipzig,Micro,2023-09-30
+C1039,Demo GmbH 040,IT Services,Frankfurt,Micro,2022-12-10
+C1040,Demo GmbH 041,IT Services,Dresden,Micro,2021-04-15
+C1041,Demo GmbH 042,Hospitality,Hamburg,Small,2019-07-22
+C1042,Demo GmbH 043,Healthcare,Hamburg,Micro,2019-05-03
+C1043,Demo GmbH 044,Energy,Cologne,Small,2020-02-05
+C1044,Demo GmbH 045,Retail,Hamburg,Medium,2021-02-05
+C1045,Demo GmbH 046,Retail,Hamburg,Micro,2019-10-21
+C1046,Demo GmbH 047,Energy,Leipzig,Micro,2019-07-17
+C1047,Demo GmbH 048,Hospitality,Cologne,Small,2024-04-14
+C1048,Demo GmbH 049,Professional Services,Leipzig,Micro,2024-12-31
+C1049,Demo GmbH 050,Professional Services,Dresden,Micro,2020-08-31
+C1050,Demo GmbH 051,Hospitality,Stuttgart,Micro,2022-02-21
+C1051,Demo GmbH 052,Professional Services,Dresden,Micro,2019-07-06
+C1052,Demo GmbH 053,IT Services,Stuttgart,Medium,2023-11-30
+C1053,Demo GmbH 054,Retail,Leipzig,Small,2020-10-21
+C1054,Demo GmbH 055,Hospitality,Dresden,Small,2024-05-09
+C1055,Demo GmbH 056,Retail,Cologne,Medium,2022-10-01
+C1056,Demo GmbH 057,Energy,Berlin,Small,2024-06-09
+C1057,Demo GmbH 058,Construction,Leipzig,Micro,2023-03-15
+C1058,Demo GmbH 059,IT Services,Stuttgart,Medium,2019-05-27
+C1059,Demo GmbH 060,Manufacturing,Frankfurt,Small,2023-10-01

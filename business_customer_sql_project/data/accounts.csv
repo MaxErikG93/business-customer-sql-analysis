@@ -1,0 +1,102 @@
+account_id,customer_id,account_type,currency,status,opening_balance
+A5001,C1000,Business Current,EUR,Active,101689
+A5002,C1001,Business Current,EUR,Active,113561
+A5003,C1001,Credit,EUR,Active,31306
+A5004,C1002,Business Current,EUR,Closed,148443
+A5005,C1003,Business Current,EUR,Active,21932
+A5006,C1004,Business Current,EUR,Active,118858
+A5007,C1004,Savings,EUR,Active,5499
+A5008,C1004,Savings,EUR,Active,13183
+A5009,C1005,Credit,EUR,Active,185423
+A5010,C1005,Business Current,EUR,Active,134629
+A5011,C1006,Credit,EUR,Active,22357
+A5012,C1006,Business Current,EUR,Active,193207
+A5013,C1006,Credit,EUR,Active,39467
+A5014,C1007,Business Current,EUR,Active,154471
+A5015,C1008,Savings,EUR,Active,202163
+A5016,C1008,Business Current,EUR,Active,149501
+A5017,C1009,Credit,EUR,Active,77213
+A5018,C1010,Business Current,EUR,Active,98888
+A5019,C1010,Business Current,EUR,Active,226732
+A5020,C1010,Business Current,EUR,Active,188907
+A5021,C1011,Business Current,EUR,Active,125123
+A5022,C1012,Business Current,EUR,Active,164707
+A5023,C1013,Credit,EUR,Active,177308
+A5024,C1014,Credit,EUR,Active,142564
+A5025,C1014,Business Current,EUR,Active,119015
+A5026,C1015,Business Current,EUR,Active,155165
+A5027,C1016,Business Current,EUR,Active,73991
+A5028,C1016,Business Current,EUR,Active,57958
+A5029,C1017,Savings,EUR,Active,238472
+A5030,C1018,Savings,EUR,Active,6801
+A5031,C1019,Savings,EUR,Active,140788
+A5032,C1019,Business Current,EUR,Active,111627
+A5033,C1020,Business Current,EUR,Active,71031
+A5034,C1020,Business Current,EUR,Active,125046
+A5035,C1021,Business Current,EUR,Active,231229
+A5036,C1022,Business Current,EUR,Closed,23677
+A5037,C1023,Business Current,EUR,Active,128813
+A5038,C1023,Business Current,EUR,Active,224844
+A5039,C1024,Savings,EUR,Active,115692
+A5040,C1025,Savings,EUR,Active,164165
+A5041,C1026,Business Current,EUR,Active,95476
+A5042,C1027,Savings,EUR,Active,74847
+A5043,C1027,Business Current,EUR,Active,113566
+A5044,C1027,Business Current,EUR,Active,6949
+A5045,C1028,Business Current,EUR,Active,67617
+A5046,C1028,Credit,EUR,Active,178247
+A5047,C1029,Savings,EUR,Active,115548
+A5048,C1030,Business Current,EUR,Active,17964
+A5049,C1030,Business Current,EUR,Active,217139
+A5050,C1031,Business Current,EUR,Active,94468
+A5051,C1031,Business Current,EUR,Active,79832
+A5052,C1032,Credit,EUR,Active,44919
+A5053,C1033,Business Current,EUR,Active,194824
+A5054,C1034,Business Current,EUR,Active,211677
+A5055,C1035,Business Current,EUR,Active,24289
+A5056,C1035,Credit,EUR,Active,42975
+A5057,C1036,Business Current,EUR,Active,105182
+A5058,C1036,Credit,EUR,Active,220295
+A5059,C1037,Business Current,EUR,Active,167267
+A5060,C1037,Business Current,EUR,Active,94610
+A5061,C1037,Credit,EUR,Active,39304
+A5062,C1038,Business Current,EUR,Active,218099
+A5063,C1038,Business Current,EUR,Active,93658
+A5064,C1039,Business Current,EUR,Active,89668
+A5065,C1039,Savings,EUR,Active,66953
+A5066,C1040,Business Current,EUR,Active,39513
+A5067,C1041,Savings,EUR,Active,61692
+A5068,C1041,Credit,EUR,Active,39756
+A5069,C1042,Savings,EUR,Closed,86999
+A5070,C1042,Business Current,EUR,Active,166983
+A5071,C1043,Credit,EUR,Active,168280
+A5072,C1044,Savings,EUR,Active,187141
+A5073,C1044,Credit,EUR,Active,179031
+A5074,C1045,Business Current,EUR,Active,80459
+A5075,C1046,Credit,EUR,Active,167342
+A5076,C1047,Business Current,EUR,Active,192993
+A5077,C1047,Business Current,EUR,Active,103795
+A5078,C1047,Business Current,EUR,Active,238027
+A5079,C1048,Savings,EUR,Active,90780
+A5080,C1048,Business Current,EUR,Active,127174
+A5081,C1048,Business Current,EUR,Active,75460
+A5082,C1049,Business Current,EUR,Active,155697
+A5083,C1050,Savings,EUR,Active,22677
+A5084,C1050,Savings,EUR,Active,94105
+A5085,C1051,Business Current,EUR,Active,55693
+A5086,C1051,Credit,EUR,Active,158504
+A5087,C1052,Business Current,EUR,Active,133396
+A5088,C1052,Savings,EUR,Active,20870
+A5089,C1053,Business Current,EUR,Active,26289
+A5090,C1054,Business Current,EUR,Active,5748
+A5091,C1054,Business Current,EUR,Active,31355
+A5092,C1054,Business Current,EUR,Active,174416
+A5093,C1055,Business Current,EUR,Active,67040
+A5094,C1055,Business Current,EUR,Active,34591
+A5095,C1056,Business Current,EUR,Active,243348
+A5096,C1057,Business Current,EUR,Active,225117
+A5097,C1057,Credit,EUR,Active,92362
+A5098,C1057,Business Current,EUR,Active,72726
+A5099,C1058,Business Current,EUR,Active,239964
+A5100,C1058,Business Current,EUR,Active,173502
+A5101,C1059,Business Current,EUR,Active,22447

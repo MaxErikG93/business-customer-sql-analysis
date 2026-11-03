@@ -347,3 +347,112 @@ GROUP BY t.account_id_raw;
 -- Note: same pattern as for accounts (0 and highest ID + 1).
 -- Decision: set invalid references to NULL in staging (flag, do not delete).
 
+
+-- ============================================
+-- 6. Data Quality in raw_accounts
+-- ============================================
+
+-- Distinct spellings in account_type
+SELECT 
+    '[' || account_type || ']' AS account_type_visible,
+    COUNT(*)                       AS n
+FROM portfolio.raw_accounts
+GROUP BY account_type
+ORDER BY account_type;
+
+-- Normalized spellings in account_type (LOWER/TRIM, NULLIF for empty values)
+SELECT LOWER(NULLIF(TRIM(account_type),'')) as account_type_trimmed, COUNT(*) as account_type_count
+FROM portfolio.raw_accounts
+GROUP BY LOWER(NULLIF(TRIM(account_type),''))
+ORDER BY account_type_count DESC, account_type_trimmed;
+-- Result: 3 spellings of 'Business Current' (lowercase, correct, trailing
+-- space) with 500 / 8,916 / 595 rows merge into one (10,011 rows) after LOWER/TRIM.
+-- 450 NULL (2.25 %), no empty strings. 4 categories remain.
+
+
+-- Distinct spellings in account_status
+SELECT 
+    '[' || account_status || ']' AS account_status_visible,
+    COUNT(*)                       AS n
+FROM portfolio.raw_accounts
+GROUP BY account_status
+ORDER BY account_status;
+
+-- Normalized spellings in account_status (LOWER/TRIM, NULLIF for empty values)
+SELECT LOWER(NULLIF(TRIM(account_status),'')) as account_status_trimmed, COUNT(*) as account_status_count
+FROM portfolio.raw_accounts
+GROUP BY LOWER(NULLIF(TRIM(account_status),''))
+ORDER BY account_status_count DESC, account_status_trimmed;
+-- Result: 2 spellings of 'Active' ('active ' with 457 rows, 'Active' with
+-- 12,959 rows) merge into one (13,416 rows) after LOWER/TRIM.
+-- 500 NULL (2.5 %), no empty strings. 3 categories remain.
+
+
+-- detect different versions of date-values in opened_at_raw
+SELECT 	COUNT(*) AS total_raws,
+		COUNT(*) FILTER (WHERE opened_at_raw IS NULL) AS opened_at_null,
+		COUNT(*) FILTER (WHERE TRIM(opened_at_raw) <> ''
+						AND TRIM(opened_at_raw) !~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$') as opened_at_wrong_format
+FROM portfolio.raw_accounts;
+
+--examine different versions of wrongly formatted date-values for opened_at_raw
+SELECT opened_at_raw, COUNT(*) AS n
+FROM portfolio.raw_accounts
+WHERE TRIM(opened_at_raw) <> '' AND TRIM(opened_at_raw) !~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+GROUP BY opened_at_raw;
+-- Result: 603 NULL (3.0 %); 397 wrong format (2.0 %), all of them 'not recorded'.
+-- Decision: set to NULL in cleaning.
+
+-- Check for illogical opening dates, e.g. dates in the future
+SELECT 	MAX(CASE
+              WHEN TRIM(opened_at_raw) ~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+              THEN TRIM(opened_at_raw)::DATE 
+			END) AS max_date,
+		MIN(CASE
+			  WHEN TRIM(opened_at_raw) ~ '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+              THEN TRIM(opened_at_raw)::DATE 
+			END) AS min_date
+FROM portfolio.raw_accounts;
+-- Result: opened_at_raw ranges from 2019-05-08 to 2025-12-29.
+-- No future dates and no impossible dates (the cast ran without errors).
+-- Decision: no additional date cleaning needed beyond 'not recorded' -> NULL.
+
+-- ============================================
+-- 7. Spelling variations in raw_transactions
+-- ============================================
+
+-- Distinct spellings in currency_raw
+SELECT 
+    '[' || currency_raw || ']' AS currency_raw_visible,
+    COUNT(*)                       AS n
+FROM portfolio.raw_transactions
+GROUP BY currency_raw
+ORDER BY currency_raw;
+
+-- Normalized spellings in currency_raw (LOWER/TRIM, NULLIF for empty values)
+SELECT LOWER(NULLIF(TRIM(currency_raw),'')) as currency_raw_trimmed, COUNT(*) as currency_raw_count
+FROM portfolio.raw_transactions
+GROUP BY LOWER(NULLIF(TRIM(currency_raw),''))
+ORDER BY currency_raw_count DESC, currency_raw_trimmed;
+-- Result: 3 spellings of 'EUR' ('eur' with 4,991 rows, 'EUR' with
+-- 184,979 rows and 'EUR ' with 4,987 rows) merge into one (eur with 194,957 rows) after LOWER/TRIM.
+-- 5,043 NULL (2.5 %), no empty strings. 1 category remains.
+-- Note: only one currency (EUR) in the data, so amounts can be summed without conversion.
+-- Decision: standardize to 'EUR' (upper case) in staging; NULL stays NULL.
+
+-- Distinct spellings in status_raw
+SELECT 
+    '[' || status_raw || ']' AS status_raw_visible,
+    COUNT(*)                       AS n
+FROM portfolio.raw_transactions
+GROUP BY status_raw
+ORDER BY status_raw;
+
+-- Normalized spellings in status_raw (LOWER/TRIM, NULLIF for empty values)
+SELECT LOWER(NULLIF(TRIM(status_raw),'')) as status_raw_trimmed, COUNT(*) as status_raw_count
+FROM portfolio.raw_transactions
+GROUP BY LOWER(NULLIF(TRIM(status_raw),''))
+ORDER BY status_raw_count DESC, status_raw_trimmed;
+-- Result: 2 spellings of 'Completed' ('Completed' with 145,902 rows and 'completed ' with
+-- 4,939 rows) merge into one ('completed' with 150,841 rows) after LOWER/TRIM.
+-- 5,146 NULL (2.6 %), no empty strings. 3 categories remain.
